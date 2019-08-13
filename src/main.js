@@ -1,13 +1,15 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from '@/App.vue'
+import router from '@/routers/index' //router 名称不可自定义
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
 
-Vue.use(ElementUI)
+Vue.use(ElementUI);
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router:router,
+  render: h => h(App) //render函数渲染模板， template只能渲染字符串
+}).$mount("#apps");
