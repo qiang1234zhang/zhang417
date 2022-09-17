@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>APP_blank_Page</h2>
+    <h2>APP_blank_Page20220918测试</h2>
     <el-button v-on:click="goHome">进入parent页面</el-button>
     <el-button type="primary">APP主要按钮</el-button>
     <el-button type="text">APP文字按钮</el-button><br/> 
