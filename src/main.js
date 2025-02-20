@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from '@/App.vue'
 import router from '@/routers/index' //router 名称不可自定义
-
+//import './AI'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
