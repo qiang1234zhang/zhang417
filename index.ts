@@ -115,3 +115,49 @@ interface Pingable {//无返回值
 interface Pingable {//有返回值，返回一个无参、无返回值的函数
     ping(): () => void;
 }
+
+//泛型函数--------------------------------------------------------------------------------
+// 泛型函数的定义及使用
+// 定义泛型函数
+
+// 定义泛型函数类型
+type MyFunction<T> = (arg: T) => T;
+
+type MyFunction2<T, U> = (arg1: T, arg2: U) => T | U;
+
+// 调用泛型函数
+const myFunc: MyFunction<number> = (arg) => arg;
+const myFunc2: MyFunction2<string, number> = (arg1, arg2) => arg1.length + arg2;
+
+console.log(myFunc(10)); // 10
+console.log(myFunc2('hello', 5)); // 10
+
+
+
+// 定义 ActionSubscriber 类型
+export type ActionSubscriber<P, S> = (action: P, state: S) => any;
+
+// 定义具体的 action 类型和 state 类型
+type MyAction = {
+    type: string;
+    payload: number;
+};
+
+type MyState = {
+    value: string;
+};
+
+// 创建一个符合 ActionSubscriber 类型的函数
+const subscriber: ActionSubscriber<MyAction, MyState> = (action, state) => {
+    console.log(`Received action: ${action.type} with payload ${action.payload}`);
+    console.log(`Current state value: ${state.value}`);
+    return 'Processed';
+};
+
+// 定义具体的 action 和 state
+const myAction: MyAction = { type: 'INCREMENT', payload: 1 };
+const myState: MyState = { value: 'Initial' };
+
+// 调用 subscriber 函数
+const result = subscriber(myAction, myState);
+console.log(`Result: ${result}`);
