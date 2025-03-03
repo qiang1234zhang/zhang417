@@ -1,18 +1,19 @@
+//先定义
 type AddF = (a: number, b: number) => number;
-
+//后使用
 const add: AddF = (a, b) => a + b;
 
 add(2,3);//5
 
-////////////////////////////////////////
-//对象类型
+//-----------------------------------------------
+//定义接口
 interface AddFs {
     d: number;
     c(m:string):number;
     a:()=>void;
     b:()=> void;
 }
-
+//创建对象
 const addF: AddFs = Object.assign(
     (m: string) => m.length,
     {   d: 5,
