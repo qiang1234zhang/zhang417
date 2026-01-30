@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "docxtemplater": "^3.67.4",
     "element-ui": "^2.7.2",
+    "file-saver": "^2.0.5",
     "openai": "^4.85.2",
+    "pdf-lib": "^1.17.1",
+    "pizzip": "^3.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
     "vuex": "^3.1.1"

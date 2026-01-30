@@ -4,7 +4,7 @@ import router from '@/routers/index' //router 名称不可自定义
 //import './AI'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
+import './temp.js'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);
