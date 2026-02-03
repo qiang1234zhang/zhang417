@@ -1,1 +1,1 @@
-SELECT * FROM teachers;
+SELECT * FROM my_database.users;
